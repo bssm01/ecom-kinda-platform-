@@ -4,6 +4,7 @@ import connectdb from "./connectdb.js";
 import router from "./routes/productRoute.js";
 import authRouter from "./routes/userAuthRoute.js";
 import dotenv from "dotenv/config.js";
+import cors from "cors";
 
 
 
@@ -12,6 +13,7 @@ const app = express();
 
 //midleware
 app.use(express.json());
+app.use(cors());
 
 
 //routes

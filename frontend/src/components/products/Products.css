@@ -1,0 +1,10 @@
+.Products {
+    width: 100%;
+    min-height: calc(100vh - 100px);
+    background-color:   #fcf3e7;
+    display: flow-root;
+}
+
+.Products h1 {
+    margin: 0;
+}
