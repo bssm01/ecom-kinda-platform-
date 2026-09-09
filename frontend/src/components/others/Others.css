@@ -1,0 +1,106 @@
+@import "../products/Products.css";
+
+.Others {
+  min-height: calc(100vh - 76px);
+  box-sizing: border-box;
+  padding: 48px 20px 64px;
+  background-color: #fcf3e7;
+  color: #3f2b20;
+}
+
+.others-content {
+  width: min(100%, 1080px);
+  margin: 0 auto;
+}
+
+.others-heading {
+  margin-bottom: 28px;
+  text-align: center;
+}
+
+.others-heading h1 {
+  margin: 0 0 10px;
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(34px, 5vw, 50px);
+}
+
+.others-heading > p:last-child {
+  margin: 0;
+  font-family: 'Playfair Display', serif;
+  font-size: 18px;
+}
+
+.others-search {
+  width: min(100%, 560px);
+  margin: 0 auto 32px;
+}
+
+.others-search label {
+  display: block;
+  margin-bottom: 8px;
+  color: #5a4030;
+  font-family: 'Playfair Display', serif;
+  font-size: 15px;
+}
+
+.others-search input {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 12px 15px;
+  border: 1px solid #b99268;
+  border-radius: 10px;
+  background-color: #fffaf3;
+  color: #3f2b20;
+  font-family: 'Playfair Display', serif;
+  font-size: 16px;
+  outline: none;
+}
+
+.others-search input:focus {
+  border-color: #8f6847;
+  box-shadow: 0 0 0 3px rgba(185, 146, 104, 0.25);
+}
+
+.others-empty,
+.others-state {
+  text-align: center;
+  font-family: 'Playfair Display', serif;
+}
+
+.others-empty {
+  padding: 48px 24px;
+  background-color: #f5dbb6;
+  border: 1px solid #d2ad7d;
+  border-radius: 16px;
+  box-shadow: 0 8px 18px rgba(63, 43, 32, 0.12);
+}
+
+.others-empty h2 {
+  margin: 0 0 10px;
+  font-size: 28px;
+}
+
+.others-empty p,
+.others-state p {
+  margin: 0;
+}
+
+.product-owner {
+  margin: -2px 0 12px;
+  color: #80634b;
+  font-size: 14px;
+  font-style: italic;
+}
+
+.others-state {
+  display: grid;
+  place-items: center;
+  padding: 40px 20px;
+}
+
+@media (max-width: 480px) {
+  .Others {
+    min-height: calc(100vh - 140px);
+    padding: 32px 16px 48px;
+  }
+}

@@ -24,8 +24,9 @@ app.use("/api/auth", authRouter);
 connectdb();
 
 //server
-const server = app.listen(process.env.PORT, () => {
-  console.log(`Server is running on port ${process.env.PORT}`);
+const port = process.env.PORT || 5000;
+const server = app.listen(port, () => {
+  console.log(`Server is running on port ${port}`);
 });
 
 server.on("error", (error) => {

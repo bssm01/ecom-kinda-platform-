@@ -1,12 +1,14 @@
 import "./Login.css";
 import {useState} from "react";
 import { useNavigate } from "react-router-dom";
+import { useAuth } from "../../authContext.jsx";
 
 function Login() {
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
     const [error, setError] = useState("");
     const navigate = useNavigate();
+    const { login } = useAuth();
 
     const Submit = async (e)=>{
         e.preventDefault();
@@ -25,8 +27,7 @@ function Login() {
         throw new Error(data.message || "Login failed");
     }
         
-    localStorage.setItem("token", data.token);
-    localStorage.setItem("user" , JSON.stringify(data.User));
+    login(data.User, data.token);
     navigate("/home"); 
 }catch (error) {
     setError(error.message);
