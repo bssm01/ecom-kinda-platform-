@@ -26,6 +26,7 @@ function Login() {
     }
         
     localStorage.setItem("token", data.token);
+    localStorage.setItem("user" , JSON.stringify(data.User));
     navigate("/home"); 
 }catch (error) {
     setError(error.message);

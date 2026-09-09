@@ -7,6 +7,11 @@ import Signup from "./components/signup/Signup.jsx";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 function App() {
+
+  const {loading} = useAuth();
+  if(loading){
+    return <div>Loading...</div>;
+  }
   return (
     <BrowserRouter>
       <Header />
