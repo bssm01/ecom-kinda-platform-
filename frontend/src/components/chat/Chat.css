@@ -1,0 +1,20 @@
+.chat-page { min-height: calc(100vh - 76px); padding: 42px 20px; background: #fcf3e7; color: #3f2b20; }
+.chat-shell { display: grid; grid-template-columns: 280px 1fr; width: min(100%, 960px); height: 620px; margin: auto; overflow: hidden; border: 1px solid #d2ad7d; border-radius: 16px; background: #fffaf3; box-shadow: 0 12px 28px rgba(63, 43, 32, .12); }
+.chat-users { border-right: 1px solid #e5cda9; background: #f5dbb6; }
+.chat-users h1 { margin: 0; padding: 24px; font-family: 'Playfair Display', serif; }
+.chat-user { display: block; width: 100%; padding: 15px 24px; border: 0; border-top: 1px solid #e5cda9; background: transparent; color: #3f2b20; text-align: left; cursor: pointer; }
+.chat-user.active, .chat-user:hover { background: #eec998; }
+.chat-user strong, .chat-user span { display: block; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.chat-user span { margin-top: 4px; color: #80634b; font-size: 12px; }
+.chat-conversation { display: grid; grid-template-rows: auto 1fr auto auto; min-width: 0; }
+.chat-conversation header { padding: 20px 24px; border-bottom: 1px solid #e5cda9; }
+.chat-conversation h2 { margin: 0; font-family: 'Playfair Display', serif; }
+.chat-messages { display: flex; flex-direction: column; gap: 10px; overflow-y: auto; padding: 24px; }
+.message { align-self: flex-start; max-width: 70%; margin: 0; padding: 10px 14px; border-radius: 12px 12px 12px 2px; background: #f5dbb6; }
+.message.mine { align-self: flex-end; border-radius: 12px 12px 2px 12px; background: #eec998; }
+.chat-form { display: flex; gap: 10px; padding: 16px; border-top: 1px solid #e5cda9; }
+.chat-form input { flex: 1; min-width: 0; padding: 12px; border: 1px solid #b99268; border-radius: 8px; background: #fff; font: inherit; }
+.chat-form button { padding: 0 18px; border: 1px solid #b99268; border-radius: 8px; background: #d8b58c; color: #3f2b20; cursor: pointer; }
+.chat-empty, .chat-error { align-self: center; justify-self: center; padding: 20px; }
+.chat-error { margin: 0; color: #9b392d; font-size: 14px; }
+@media (max-width: 700px) { .chat-page { padding: 20px 12px; } .chat-shell { grid-template-columns: 1fr; height: auto; min-height: 650px; } .chat-users { max-height: 220px; overflow-y: auto; border-right: 0; border-bottom: 1px solid #e5cda9; } .chat-conversation { min-height: 420px; } }

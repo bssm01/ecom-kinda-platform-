@@ -37,6 +37,14 @@ function Header() {
             Others
           </NavLink>
           <NavLink
+            to="/chat"
+            className={({ isActive }) =>
+              isActive ? "navbar-link active" : "navbar-link"
+            }
+          >
+            Chat
+          </NavLink>
+          <NavLink
             to="/contact"
             className={({ isActive }) =>
               isActive ? "navbar-link active" : "navbar-link"
